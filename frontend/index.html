@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h4 class="title">URL Shortener</h4>
+        <form  class="input-wrapper">
+            <input type="text" name="url" value='' id="input" placeholder="URL...">
+            <input type="submit" id="submit" value="Generate">
+        </form>
+        <p class="error">Please Provide A Url</p>
+        <h4 class="return_url"><a href="">https://localhost:8080</a></h4>
+    </div>
+</body>
+<script src="./script.js" defer></script>
+</html>
