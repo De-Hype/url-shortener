@@ -5,6 +5,7 @@
 }
 body{
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 .logo{
@@ -65,12 +66,14 @@ body{
     background-color: purple;
     border-radius: 50%;
     position: relative;
+    border: 1px solid black;
 }
 
 .hero-image{
     position: absolute;
     height: 300px;
     width: 350px;
+    left: -40px;
 }
 
 .generator{
@@ -112,6 +115,23 @@ input{
 
 .footer{
     background-color: rgb(239, 44, 239);
+    padding:1.2rem 2.3rem ;
+}
+.footer-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+   gap: 2rem;
+}
+ul li{
+    list-style-type: none;
 }
 @media screen and (max-width:1028px) {
     .hero-text-wrapper{
