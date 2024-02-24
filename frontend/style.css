@@ -7,6 +7,19 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
 }
+.success{
+    color:green;
+    font-size: 14px;
+     margin-top: .9rem;
+}
+.error{
+    color: red;
+    font-size: 14px;
+     margin-top: .9rem;
+}
+#generated-link{
+    margin-top: 1.3rem;
+}
 
 .logo{
     color: purple;
@@ -203,5 +216,30 @@ ul li{
     .benefits .cards{
         display: flex;
         flex-direction: column;
+    }
+}
+@media screen and (max-width:420px){
+    .image-container{
+        height: 320px;
+        width: 320px;
+        background-color: purple;
+        border-radius: 50%;
+        position: relative;
+        border: 1px solid black;
+    }
+    
+    .hero-image{
+        position: absolute;
+        height: 290px;
+        width: 310px;
+        left: -40px;
+    }
+    .footer-wrapper{
+        flex-direction: column;
+    }
+    .footer-links{
+        flex-direction:colum;
+        width:100%;
+        margin-top: 2rem;
     }
 }

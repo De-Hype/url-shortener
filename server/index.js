@@ -9,7 +9,7 @@ const ShortUrl = require("./model");
 
 const app = express();
 app.use(cors());
-app.use(helmet());
+app.use(helmet()); 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -21,9 +21,11 @@ const connect = async () => {
     console.error(error);
   }
 };
+connect();
 
-app.post("/generate", async (req, res) => {
-  const { url } = req.body;
+app.post("/v1/generate", async (req, res) => {
+  const { url, hostname } = req.body;
+ 
   if (url == "" || !url) {
     return res
       .status(400)
@@ -32,23 +34,24 @@ app.post("/generate", async (req, res) => {
   try {
     const url_link = await ShortUrl.findOne({ url });
     if (url_link) {
+    
       return res.status(202).json({
         status: "OK",
-        messsage: `${req.headers.host}/${url_link.shortId}`,
+        messsage: `${hostname}/${url_link.shortId}`,
       });
     }
     const shortUrl = await ShortUrl({ url, shortId: shortId.generate() });
     const result = await shortUrl.save();
     return res.status(202).json({
       status: "OK",
-      messsage: `${req.headers.host}/${result.shortId}`,
+      messsage: `${hostname}/${result.shortId}`,
     });
   } catch (error) {
     console.error(error);
   }
 });
 
-app.get("/:shortId", async (req, res) => {
+app.get("/v1/:shortId", async (req, res) => {
   const { shortId } = req.params;
   try {
     const result = await ShortUrl.findOne({ shortId });
