@@ -110,9 +110,32 @@ input{
 }
 
 .benefits{
-    margin-top: 2.5rem;
+    margin-top: 3.5rem;
 }
-
+.benefits .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 2rem 2rem 2rem;
+    gap: 1.2rem;
+}
+.benefits .cards .card{
+    background-color: purple;
+    padding: .98rem 1.7rem; 
+    cursor: pointer;
+    border: .3px solid purple;
+}
+.benefits .cards .card:hover{
+    background-color: white;
+    border: .3px solid purple;
+    padding: .98rem 1.7rem; 
+}
+.benefits .cards .card h3{
+    font-weight: 800;
+    padding: 5px 0;
+}
+/* .benefits .cards .card p{
+    
+} */
 .footer{
     background-color: rgb(239, 44, 239);
     padding:1.2rem 2.3rem ;
@@ -120,18 +143,33 @@ input{
 .footer-wrapper{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
+}
+.top{
+    align-self: flex-start;
 }
 .footer-links{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid black;
-   gap: 2rem;
+    width:60%;
+}
+.footer-links h6{
+    font-size: 1.08rem;
+    font-weight: 800;
+}
+.footer-links ul{
+    margin-top: .9rem;
 }
 ul li{
     list-style-type: none;
+    margin: .4rem 0;
+}
+.footer-bottom{
+    margin-top: 1.8rem;
+}
+.footer-bottom h4{
+    text-align: center;
 }
 @media screen and (max-width:1028px) {
     .hero-text-wrapper{
@@ -157,5 +195,13 @@ ul li{
         
         font-size: .9rem;
         
+    }
+
+}
+
+@media screen and (max-width:668px) {
+    .benefits .cards{
+        display: flex;
+        flex-direction: column;
     }
 }
