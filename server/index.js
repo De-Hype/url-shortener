@@ -9,7 +9,7 @@ const ShortUrl = require("./model");
 
 const app = express();
 app.use(cors());
-app.use(helmet()); 
+app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -25,7 +25,7 @@ connect();
 
 app.post("/v1/generate", async (req, res) => {
   const { url, hostname } = req.body;
- 
+
   if (url == "" || !url) {
     return res
       .status(400)
@@ -34,7 +34,6 @@ app.post("/v1/generate", async (req, res) => {
   try {
     const url_link = await ShortUrl.findOne({ url });
     if (url_link) {
-    
       return res.status(202).json({
         status: "OK",
         messsage: `${hostname}/${url_link.shortId}`,
@@ -65,9 +64,9 @@ app.get("/v1/:shortId", async (req, res) => {
       .status(202)
       .json({
         status: "OK",
-        messsage: `Succesful`,
-      })
-      .redirect(result.url);
+        messsage: `Redirecting to the new url`,
+        site:result.url
+      });
   } catch (error) {
     console.error(error);
   }
