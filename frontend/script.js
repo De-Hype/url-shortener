@@ -10,7 +10,7 @@ const generate = document.getElementsByClassName("generator-wrapper");
 button.addEventListener("click", (e) => {
   e.preventDefault();
   const url = input.value;
-  const hostname="http://bliinko.vercel.app";
+  const hostname="http://bliink.vercel.app";
   
   if (url == "" || undefined) {
     generated_link.innerHTML = '';
