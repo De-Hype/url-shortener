@@ -1,97 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortener</title>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h2 class="logo">Bliink</h2>
-
-        </header>
-       
-        <!-- Hero -->
-        <section class="hero">
-            <aside class="hero-text-wrapper">
-                <h3 class="hero-text">Generate short urls in seconds with <span class="hero-text-bold">Bliink</span></h3>
-                <p>Amplify your brand's identity while gaining deep insights into link performance metrics</p>
-                <button id="btn" type="button">Get Started</button>
-            </aside>
-            <aside class="image-container">
-                <img src="./assets/Bliinks_Two.svg" class="hero-image" alt="">
-            </aside>
-        </section>
-        <!-- Generator -->
-        <section class="generator">
-           
-                <h3 class="heading">Generate Your Short URL</h3>
-                <div class="generator-wrapper">
-                    <input type="text" name="" placeholder="Enter URL here..." id="input">
-                    <button type="button" id="btn-generate">Shorten</button>
-                </div>
-                <h5 class="generated-link">
-
-                </h5>
-                <p class="error" id="error"></p>
-                <p class="success" id="success"></p>
-                <a href="" id="generated-link"></a>
-
-        </section>
-
-        <!-- Benefits with cards -->
-        <section class="benefits">
-            <h3 class="heading">Benefits</h3>
-            <div class="cards">
-                <div class="card">
-                    <h3>Space-saving Links</h3>
-                    <p>Reduce long and cumbersome URLs into shorter, more manageable links, saving space and making them easier to share across various platforms like social media, emails and text messages.</p>
-                </div>
-                <div class="card">
-                    <h3>Enhanced Branding</h3>
-                    <p>Customize your shortened URLs to reflect your brand or content, helping to reinforce brand identity and improve link trustworthiness among your audience.</p>
-                </div>
-                <div class="card">
-                    <h3>Trackable Analytics</h3>
-                    <p>Gain insights into link performance with built-in analytics features, allowing you to track click-through rates, geographic locations of users, and other valuable metrics to optimize your marketing efforts.</p>
-                </div>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="footer">
-        <div class="footer-wrapper">          
-            <h2 class="logo top">Bliink</h2>
-            <div class="footer-links">
-                <div class="">
-                    <h6>Company</h6>
-                    <ul>
-                        <li>About</li>
-                        <li>Product</li>
-                        <li>Pricing</li>
-                        <li>Careers <span class="">hiring</span></li>
-                        <li>Contact Us</li>
-
-                    </ul>
-                </div>
-                <div class="top">
-                    <h6>Resources</h6>
-                    <ul>
-                        <li>API Intergration</li>
-                        <li>Blog</li>
-                        <li>Support</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <h4>Built by David Hype <span>2024</span></h4>
-        </div>
-        </footer>
-    </div>
-</body>
-<script src="./script.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bliink URL Shortener</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

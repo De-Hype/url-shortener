@@ -31,15 +31,16 @@ app.post("/v1/generate", async (req, res) => {
       .status(400)
       .json({ status: "Error", messsage: "Please Provide A Valid Url" });
   }
+  const lowercaseUrl = url.toLowerCase().trim()
   try {
-    const url_link = await ShortUrl.findOne({ url });
+    const url_link = await ShortUrl.findOne({ lowercaseUrl });
     if (url_link) {
       return res.status(202).json({
         status: "OK",
         messsage: `${hostname}/${url_link.shortId}`,
       });
     }
-    const shortUrl = await ShortUrl({ url, shortId: shortId.generate() });
+    const shortUrl = await ShortUrl({ lowercaseUrl, shortId: shortId.generate() });
     const result = await shortUrl.save();
     return res.status(202).json({
       status: "OK",
