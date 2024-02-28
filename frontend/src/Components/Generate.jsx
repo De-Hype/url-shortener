@@ -16,8 +16,8 @@ const Generate = () => {
    
     const postData = async () => {
       try {
-         const api = "http://localhost:5050/v1/generate";
-        // const api = "https://url-shortener-z695.onrender.com/v1/generate";
+         //const api = "http://localhost:5050/v1/generate";
+         const api = "https://url-shortener-z695.onrender.com/v1/generate";
         const body = {
           url,
           hostname,

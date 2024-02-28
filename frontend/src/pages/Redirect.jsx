@@ -7,8 +7,8 @@ const Redirect = () => {
   const RedirectPage = async () => {
     if (id) {
       try {
-        const api = `http://localhost:5050/v1/${id}`;
-        // const api = `https://url-shortener-z695.onrender.com/v1/${id}`;
+       // const api = `http://localhost:5050/v1/${id}`;
+         const api = `https://url-shortener-z695.onrender.com/v1/${id}`;
 
         const response = await axios.get(api);
         if (response.data.status == "OK") {
