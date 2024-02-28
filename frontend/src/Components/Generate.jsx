@@ -8,15 +8,16 @@ const Generate = () => {
   const handleBtnClick = (e) =>{
     e.preventDefault();
     const hostname = "http://bliink.vercel.app";
+    // const hostname = "http://localhost:5173";
     if (url == "" || undefined) {
       toast.error('Please Enter a valid URL');
       setshortenUrl('')
       return;
     }
-   
+   console.log(url)
     const postData = async () => {
       try {
-         //const api = "http://localhost:5050/v1/generate";
+        // const api = "http://localhost:5050/v1/generate";
          const api = "https://url-shortener-z695.onrender.com/v1/generate";
         const body = {
           url,

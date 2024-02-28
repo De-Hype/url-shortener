@@ -40,7 +40,7 @@ app.post("/v1/generate", async (req, res) => {
         messsage: `${hostname}/${url_link.shortId}`,
       });
     }
-    const shortUrl = await ShortUrl({ lowercaseUrl, shortId: shortId.generate() });
+    const shortUrl = await ShortUrl({ url:lowercaseUrl, shortId: shortId.generate() });
     const result = await shortUrl.save();
     return res.status(202).json({
       status: "OK",
