@@ -13,6 +13,7 @@ const Redirect = () => {
         const response = await axios.get(api);
         if (response.data.status == "OK") {
           const link = response.data.site;
+          console.log(site)
           window.location.href = link;
         } else {
           navigate("/");
