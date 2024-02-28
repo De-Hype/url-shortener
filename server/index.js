@@ -33,7 +33,7 @@ app.post("/v1/generate", async (req, res) => {
   }
   const lowercaseUrl = url.toLowerCase().trim()
   try {
-    const url_link = await ShortUrl.findOne({ lowercaseUrl });
+    const url_link = await ShortUrl.findOne({ url:lowercaseUrl });
     if (url_link) {
       return res.status(202).json({
         status: "OK",

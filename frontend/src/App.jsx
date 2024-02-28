@@ -9,8 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/:id" element={<Redirect />} />
+        </>
       </Routes>
     </BrowserRouter>
   );
