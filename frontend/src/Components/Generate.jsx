@@ -14,7 +14,7 @@ const Generate = () => {
       setshortenUrl('')
       return;
     }
-   console.log(url)
+   
     const postData = async () => {
       try {
         // const api = "http://localhost:5050/v1/generate";

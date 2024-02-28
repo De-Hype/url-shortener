@@ -3,8 +3,7 @@ import { useEffect } from "react";
 import { useParams,  useNavigate } from "react-router-dom";
 const Redirect = () => {
   const { id } = useParams();
-  console.log(id)
-   
+
   const navigate = useNavigate();
   const RedirectPage = async () => {
    
@@ -15,7 +14,7 @@ const Redirect = () => {
         const response = await axios.get(api);
         if (response.data.status == "OK") {
           const link = response.data.site;
-          console.log(link)
+          
           // navigate(`link`)
           if(link.startsWith('https://' || 'http://')){
 
